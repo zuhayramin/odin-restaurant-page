@@ -12,6 +12,8 @@ function renderNav(content) {
     const nav = document.createElement("div")
     nav.classList.add("nav")
 
+    // Add links when the corresponding pages are ready
+
     const aboutLink = document.createElement("a")
     const aboutUs = document.createElement("div")
     aboutUs.innerText = "About Us"
@@ -42,31 +44,38 @@ function renderNav(content) {
 
 function heroSection(content) {
     const hero = document.createElement("div")
-    hero.classList.add("hero")
+    hero.classList.add("hero-section")
 
-    const pancakeWrapper = document.createElement("div")
-    pancakeWrapper.className = "pancake"
-
+    // Pancake Image
+    const pancakesContainer = document.createElement("div")
+    pancakesContainer.classList.add("pancakes-container")
     const pancakes = new Image()
     pancakes.src = Pancakes
-    pancakes.className = "pancake"
+    pancakes.id = "pancakes"
+    pancakesContainer.appendChild(pancakes)
 
-    content.appendChild(pancakes)
-
+    // Hero Text
     const heroText = document.createElement("div")
     heroText.classList.add("hero-text")
 
     const heroHeader = document.createElement("div")
-    heroHeader.innerText = "Pancake House"
+    heroHeader.classList.add("hero-header")
+    heroHeader.innerText = "Pancake & Waffle House"
 
     const heroBody = document.createElement("div")
-    heroBody.innerText =
-        "Come taste the greatest pancakes you ever had!\nMy mom says so, so it must be true"
+    heroBody.classList.add("hero-body")
+    heroBody.innerHTML =
+        "Come try our world famous pancakes. <br />They're absolutely delicious....my mom said so"
+
+    const menuBtn = document.createElement("div")
+    menuBtn.classList.add("menu-btn")
+    menuBtn.innerText = "Menu"
 
     heroText.appendChild(heroHeader)
     heroText.appendChild(heroBody)
+    heroText.appendChild(menuBtn)
 
-    hero.appendChild(pancakeWrapper)
+    hero.appendChild(pancakesContainer)
     hero.appendChild(heroText)
 
     content.appendChild(hero)

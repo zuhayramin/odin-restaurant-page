@@ -6,6 +6,7 @@ function renderHomePage() {
 
     renderNav(content)
     heroSection(content)
+    testimonials(content)
 }
 
 function renderNav(content) {
@@ -79,6 +80,54 @@ function heroSection(content) {
     hero.appendChild(heroText)
 
     content.appendChild(hero)
+}
+
+function testimonials(content) {
+    const Users = [
+        {
+            name: "Michelle",
+            comment:
+                "Absolutely Amazing, my favourite were the blueberry pancakes",
+        },
+        {
+            name: "Jon",
+            comment:
+                "Best pancakes I've ever had. I usually have them with marmalade and cream",
+        },
+        {
+            name: "Henry",
+            comment: "Ehhh...could be better. These guys skimp on the nutella",
+        },
+    ]
+
+    const testimonials = document.createElement("div")
+    testimonials.classList.add("testimonials")
+
+    for (const user of Users) {
+        // Create user card
+        const card = document.createElement("div")
+        card.classList.add("card")
+
+        // Create heading section of card
+        const cardHeading = document.createElement("div")
+        cardHeading.classList.add("card-heading")
+        cardHeading.innerText = user.name
+
+        // Create comment of user
+        const cardComments = document.createElement("p")
+        cardComments.classList.add("card-comments")
+        cardComments.innerText = user.comment
+
+        // Add heading and comments to card
+        card.appendChild(cardHeading)
+        card.appendChild(cardComments)
+
+        // Add card to testimonial dic
+        testimonials.appendChild(card)
+    }
+
+    // update the DOM
+    content.appendChild(testimonials)
 }
 
 export { renderHomePage }

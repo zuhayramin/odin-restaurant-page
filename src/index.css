@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Dhurjati&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+    background-color: #fbdaab;
+    color: #23628e;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+    height: 50px;
+    font-weight: 500;
+    margin: 40px 0;
+}
+
+.nav-option {
+    border-radius: 5px;
+    height: 3rem;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #23628e;
+}
+
+.nav-option:hover {
+    background-color: #23628e;
+    color: #fbdaab;
+    cursor: pointer;
+}

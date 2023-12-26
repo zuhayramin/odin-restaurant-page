@@ -1,4 +1,4 @@
-function renderNav(content) {
+function renderNav(contentNav) {
     const nav = document.createElement("div")
     nav.classList.add("nav")
 
@@ -9,6 +9,7 @@ function renderNav(content) {
     aboutUs.innerText = "About Us"
 
     aboutUs.classList.add("nav-option")
+    aboutUs.id = "about"
     aboutLink.appendChild(aboutUs)
 
     const menuLink = document.createElement("a")
@@ -16,6 +17,7 @@ function renderNav(content) {
     menu.innerText = "Menu"
 
     menu.classList.add("nav-option")
+    menu.id = "menu"
     menuLink.appendChild(menu)
 
     const contactLink = document.createElement("a")
@@ -23,13 +25,14 @@ function renderNav(content) {
     contact.innerText = "Contact"
 
     contact.classList.add("nav-option")
+    contact.id = "contact"
     contactLink.appendChild(contact)
 
     nav.appendChild(aboutLink)
     nav.appendChild(menuLink)
     nav.appendChild(contactLink)
 
-    content.appendChild(nav)
+    contentNav.appendChild(nav)
 }
 
 export { renderNav }

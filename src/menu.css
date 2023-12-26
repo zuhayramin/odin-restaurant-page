@@ -1,0 +1,57 @@
+.menu-container {
+    border-style: solid;
+    border-color: #23628e;
+    border-radius: 30px;
+    border-width: 5px;
+    width: 900px;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* height: 1000px; */
+}
+
+.menu-card {
+    border: 10px double #23628e;
+    max-height: 250px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 0.5fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas:
+        "image name price"
+        "image description price";
+    gap: 1rem;
+}
+
+.item-image {
+    grid-area: image;
+}
+
+.item-image img {
+    border-radius: 30px;
+    width: 100%;
+    grid-area: image;
+}
+
+.item-name {
+    grid-area: name;
+    font-size: 2rem;
+    margin: 1rem 0.5rem 0 0;
+}
+
+.item-description {
+    display: flex;
+    justify-self: flex-start;
+    grid-area: description;
+    font-size: 1.2rem;
+}
+
+.item-price {
+    grid-area: price;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}

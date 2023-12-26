@@ -1,10 +1,8 @@
 import Pancakes from "./pancakes.jpg"
-import "./style.css"
-
-import { renderNav } from "./nav"
+import "./home-page.css"
+import "./index.css"
 
 function renderHomePage(content) {
-    renderNav(content)
     heroSection(content)
     testimonials(content)
 }

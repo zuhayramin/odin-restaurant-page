@@ -1,11 +1,10 @@
-import { renderNav } from "./nav"
 import "./index.css"
 import "./menu.css"
-import Blueberry from "./blueberry.jpg"
-import Chocolate from "./chocolate.jpg"
-import Berries from "./berries.jpg"
-import BlueberryWaffles from "./blueberryWaffles.jpg"
-import ChocolateWaffles from "./chocolateWaffles.jpg"
+import Blueberry from "./blueberry.webp"
+import Chocolate from "./chocolate.webp"
+import Berries from "./berries.webp"
+import BlueberryWaffles from "./blueberryWaffles.webp"
+import ChocolateWaffles from "./chocolateWaffles.webp"
 
 function renderMenuItems(content) {
     const menuContainer = document.createElement("div")

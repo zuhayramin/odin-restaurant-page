@@ -1,6 +1,5 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin")
 
 module.exports = {
     mode: "development",
@@ -17,7 +16,7 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(webp)$/i,
                 type: "asset/resource",
             },
         ],
@@ -28,16 +27,4 @@ module.exports = {
             template: "./src/index.html",
         }),
     ],
-    optimization: {
-        minimizer: [
-            new ImageMinimizerPlugin({
-                minimizer: {
-                    implementation: ImageMinimizerPlugin.imageminMinify,
-                    options: {
-                        plugins: [["jpegtran", { progressive: true }]],
-                    },
-                },
-            }),
-        ],
-    },
 }

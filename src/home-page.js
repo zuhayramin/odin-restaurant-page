@@ -1,4 +1,4 @@
-import Pancakes from "./pancakes.jpg"
+import Pancakes from "./pancakes.webp"
 import "./home-page.css"
 import "./index.css"
 

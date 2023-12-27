@@ -1,10 +1,13 @@
 import Pancakes from "./pancakes.webp"
 import "./home-page.css"
 import "./index.css"
+import renderMenuItems from "./menu"
 
 function renderHomePage(content) {
     heroSection(content)
     testimonials(content)
+    contactSection(content)
+    footer(content)
 }
 
 function heroSection(content) {
@@ -30,15 +33,10 @@ function heroSection(content) {
     const heroBody = document.createElement("div")
     heroBody.classList.add("hero-body")
     heroBody.innerHTML =
-        "Come try our world famous pancakes. <br />They're absolutely delicious....my mom said so"
-
-    const menuBtn = document.createElement("div")
-    menuBtn.classList.add("menu-btn")
-    menuBtn.innerText = "Menu"
+        "Indulge your taste buds in a symphony of flavors at our pancake and waffle haven! Our passion lies in crafting the perfect plain pancakes and waffles, elevated to new heights with the freshest, most delectable toppings."
 
     heroText.appendChild(heroHeader)
     heroText.appendChild(heroBody)
-    heroText.appendChild(menuBtn)
 
     hero.appendChild(pancakesContainer)
     hero.appendChild(heroText)
@@ -94,4 +92,49 @@ function testimonials(content) {
     content.appendChild(testimonials)
 }
 
+function contactSection(content) {
+    const contactInfo = document.createElement("div")
+    contactInfo.classList.add("contact-info")
+
+    const phoneTitle = document.createElement("div")
+    phoneTitle.classList.add("contact-title")
+    phoneTitle.innerText = "Phone"
+
+    const phoneValue = document.createElement("div")
+    phoneValue.classList.add("contact-value")
+    phoneValue.innerText = "+(1) 234 567 8910"
+
+    const emailTitle = document.createElement("div")
+    emailTitle.classList.add("contact-title")
+    emailTitle.innerText = "Email"
+
+    const emailValue = document.createElement("div")
+    emailValue.classList.add("contact-value")
+    emailValue.innerText = "contact@paw.com"
+
+    const addressTitle = document.createElement("div")
+    addressTitle.classList.add("contact-title")
+    addressTitle.innerText = "Address"
+
+    const addressValue = document.createElement("div")
+    addressValue.classList.add("contact-value")
+    addressValue.innerText =
+        "Shop #78, North Eastern Boulevard, Narnia Lane, Narnia"
+
+    contactInfo.appendChild(phoneTitle)
+    contactInfo.appendChild(phoneValue)
+    contactInfo.appendChild(emailTitle)
+    contactInfo.appendChild(emailValue)
+    contactInfo.appendChild(addressTitle)
+    contactInfo.appendChild(addressValue)
+
+    content.appendChild(contactInfo)
+}
+
+function footer(content) {
+    const footer = document.createElement("footer")
+    footer.innerText = "2023 © Zuhayr Amin"
+
+    content.appendChild(footer)
+}
 export { renderHomePage }

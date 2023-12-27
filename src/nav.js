@@ -20,17 +20,8 @@ function renderNav(contentNav) {
     menu.id = "menu"
     menuLink.appendChild(menu)
 
-    const contactLink = document.createElement("a")
-    const contact = document.createElement("div")
-    contact.innerText = "Contact"
-
-    contact.classList.add("nav-option")
-    contact.id = "contact"
-    contactLink.appendChild(contact)
-
     nav.appendChild(aboutLink)
     nav.appendChild(menuLink)
-    nav.appendChild(contactLink)
 
     contentNav.appendChild(nav)
 }

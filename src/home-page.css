@@ -1,11 +1,13 @@
 .hero-text {
     width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .hero-section {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px;
 }
 
@@ -51,7 +53,7 @@
 
 .testimonials {
     border-radius: 30px;
-    margin-top: 80px;
+    margin-top: 40px;
     display: flex;
     gap: 20px;
     background-color: #23628e;
@@ -85,4 +87,43 @@
 
 .card-comments {
     font-size: 1rem;
+}
+
+.contact-info {
+    margin-top: 40px;
+    padding: 20px 30px;
+    max-width: 1080px;
+    font-family: "Playfair Display", serif;
+    border: 6px solid #23628e;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-value {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px 0;
+    margin-bottom: 0;
+    width: 100dvw;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23628e;
+    color: antiquewhite;
 }
